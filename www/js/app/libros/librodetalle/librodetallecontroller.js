@@ -1,17 +1,13 @@
 angular.module('librosmodule')
 
-    .controller('librodetallecontroller', function ($scope,  libro) {
+    .controller('LlibroDetalleCtrl', function ($scope, $rootScope, $state){
+        if($rootScope.objlibro !== null || $rootScope.objLibro !== undefined){
+            $rootScope.objLibro;
+        }else{
+            $state.go('app.libros');
+        }
 
-
-$scope.libro=libro;
-        // libroservicio.obtenerlibros().then(function () {
-
-        //     $scope.libros = libroservicio.libros;
-        // },
-        //     function (error) {
-        //         $scope.libros = [];
-        //     })
-
-
+      // console.log($rootScope.objLibro);
+     
 
     });

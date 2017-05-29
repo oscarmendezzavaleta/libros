@@ -1,17 +1,17 @@
 angular.module('librosmodule')
 
-    .controller('libroscontroller', function ($scope,  libros) {
+    .controller('libroscontroller', function ($scope, $rootScope, $state, libros) {
+
+        console.log(libros);
+        $scope.libros = libros;
+     
 
 
-$scope.libros=libros;
-        // libroservicio.obtenerlibros().then(function () {
+        $scope.getDetalleLibro = function (objLibro) {
+       //     console.log(objLibro);
+            $rootScope.objLibro = objLibro;
+            $state.go('app.libroDetalle');
+        }
+    })
 
-        //     $scope.libros = libroservicio.libros;
-        // },
-        //     function (error) {
-        //         $scope.libros = [];
-        //     })
-
-
-
-    });
+  
