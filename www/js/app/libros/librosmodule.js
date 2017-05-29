@@ -25,6 +25,16 @@ angular.module('librosmodule', ['entidadmodulo', 'jsonbookmodulo'])
                     }
                 }
             })
+
+             .state('app.buscar', {
+                url: '/librobuscar',
+                views: {
+                    'content': {
+                        templateUrl: 'js/app/libros/buscarlibro/librobuscar.html',
+                        controller: 'LlibrobuscarCtrl'
+                    }
+                }
+            })
     })
         /*.state('app.librodetalle', {
             

@@ -2,7 +2,7 @@ angular.module('librosmodule')
 
     .controller('libroscontroller', function ($scope, $rootScope, $state, libros) {
 
-        console.log(libros);
+      //  console.log(libros);
         $scope.libros = libros;
      
 
